@@ -6,7 +6,6 @@ from openai import AzureOpenAI
 #from scipy.io.wavfile import write
 from dotenv import load_dotenv
 import streamlit as st
-#from streamlit_audiorecorder import audiorecorder
 from audiorecorder import audiorecorder
 
 # .env 환경변수 로드
@@ -31,6 +30,8 @@ def user_input() :
     # 이 컴포넌트가 녹음을 시작하고 완료되면 오디오 데이터 객체를 반환합니다.
     audio_data = audiorecorder("🎙️ 클릭하여 녹음 시작", "녹음 중... (완료 시 다시 클릭)")
 
+    WAV_OUTPUT_FILENAME = ""
+    
     # 녹음이 완료되면 (데이터의 길이가 0보다 크면) 다음 로직이 실행됩니다.
     if len(audio_data) > 0:
         st.success("✅ 녹음 완료! 데이터를 처리합니다.")
@@ -71,6 +72,3 @@ def user_input() :
         )
 
         return transcription.text
-
-
-

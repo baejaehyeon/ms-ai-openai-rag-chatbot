@@ -1,6 +1,6 @@
+streamlit
+streamlit-audiorecorder
 openai
 python-dotenv
 pygame
-streamlit
-streamlit-audiorecorder
-
+scipy

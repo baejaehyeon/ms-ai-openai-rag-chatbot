@@ -46,7 +46,7 @@ else:
     if os.path.exists(guide_file_absolute):
         # Pygame 대신 Streamlit의 st.audio()를 사용하여 브라우저에서 재생
         st.subheader("🎵 안내 음성 재생")
-        st.audio(guide_file_absolute, format="audio/mp3", start_time=0)
+        st.audio(guide_file_absolute, format="audio/mp3", start_time=0, autoplay=True)
     else:
         st.error(f"❌ 오류: 안내 파일 '{guide_file_relative}'을(를) 찾을 수 없습니다.\n검사된 경로: {guide_file_absolute}")
 

@@ -2,7 +2,7 @@ import os
 from openai import AzureOpenAI
 
 # 마이크 입력
-import sounddevice as sd
+#import sounddevice as sd
 from scipy.io.wavfile import write
 from dotenv import load_dotenv
 import streamlit as st
@@ -70,3 +70,4 @@ def user_input() :
         )
 
         return transcription.text
+

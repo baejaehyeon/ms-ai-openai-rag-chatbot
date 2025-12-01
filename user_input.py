@@ -6,7 +6,8 @@ from openai import AzureOpenAI
 #from scipy.io.wavfile import write
 from dotenv import load_dotenv
 import streamlit as st
-from streamlit_audiorecorder import audiorecorder
+#from streamlit_audiorecorder import audiorecorder
+from audiorecorder import audiorecorder
 
 # .env 환경변수 로드
 load_dotenv()
@@ -70,5 +71,6 @@ def user_input() :
         )
 
         return transcription.text
+
 
 

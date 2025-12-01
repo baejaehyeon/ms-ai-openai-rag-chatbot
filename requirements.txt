@@ -1,6 +1,6 @@
 openai
 python-dotenv
-playsound
 pygame
 streamlit
 streamlit-audiorecorder
+
